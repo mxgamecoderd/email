@@ -24,17 +24,17 @@ app.post('/send-message', (req, res) => {
 
     // Create a transporter object using SMTP transport
     const transporter = nodemailer.createTransport({
-        service: 'gmail',  // or you can use another service like Yahoo, Outlook, etc.
+        service: 'gmail',
         auth: {
-            user: 'olamilekandamilaraa@gmail.com',  // Your email address
-            pass: 'Olamilekan2007',   // Your email password (or an app password for Gmail)
+            user: 'olamilekandamilaraa@gmail.com',  // Replace with the test Gmail
+            pass: 'Olamilekan2007',  // Replace with the test Gmail password
         },
     });
 
     // Set up the email data
     const mailOptions = {
         from: email,
-        to: 'olamilekandamilaraa@gmail.com',  // The email address where you want to receive messages
+        to: 'olamilekandamilaraa@gmail.com',  // Send to the test Gmail
         subject: `New Contact Form Message from ${name}`,
         text: `You have a new message from the contact form:\n\nName: ${name}\nEmail: ${email}\n\nMessage: ${message}`,
     };
